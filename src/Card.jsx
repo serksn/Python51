@@ -1,36 +1,32 @@
 import React from 'react'
+import './CardComponent.css'
+import Button from './Button' 
 
-const card = ({name, color = 'green', status = 'в наличии', count = 0}) => {
+const Card = ({name, image, price, count = 0}) => {
 
-    if (status == 'Отсутствует') count = 0;
+    var colorstyle = {color: 'white'};
+    if (count>1000) colorstyle={color: 'green'};
+    else if (count>100) colorstyle={color: 'blue'};
+    else colorstyle={color: 'red'};
+
+    const styles = {
+        width: '100%',
+        borderRadius: '3px',
+    };
+
+    const buyMe = () => {
+        alert(`Товар ${name} был успешно добавлен в корзину!`);
+    };
 
     return (
-        <span style = {{
-            height: '100px',
-            width: '150px',
-            border: '5px solid',
-            borderRadius: '5px',
-            margin: '10px'
-        }}>
-            <h2>{name}</h2>
-            <span style= {{
-                color: color,
-                fontFamily: 'Arial',
-                fontSize: '12px',
-                margin: '5px'
-            }}>
-                {status}
-            </span>
-            <span style={{
-                color: color,
-                fontFamily: 'Arial',
-                fontSize: '12px',
-                margin: '5px'
-            }}>
-                {count === 0 ? '' : count}
-            </span>
-        </span>
+        <div className='card'>
+            <img src={image} alt={name}  style={styles}/>
+            <h2 className='titleName'>{name}</h2>
+            <p className='price'>{price} руб.</p>
+            <p className='count' style={colorstyle}>Осталось всего {count} штук</p>
+            <Button label={"Купить"} onClick={buyMe} />
+        </div>
     )
 };
 
-export default card;
+export default Card;

@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import Boots1 from './assets/boots1.png'
+import Boots2 from './assets/boots2.webp'
 import './App.css'
-import MyButton from './Button'
 import Card from './Card'
 
 function App() {
@@ -11,11 +10,8 @@ function App() {
 
   return (
     <>
-      <MyButton label={123} onClick={()=>{console.log("123");}}  />
-      <MyButton label={123} onClick={()=>{}}  />
-
-      <Card name={"Наименование 1"} color={"red"} status={"В наличие"} count={5}/>
-      <Card name={"Наименование 2"} color={"green"} status={"Отсутствует"} count={5}/>
+      <Card name={"Кроссовки белые"} image={Boots1} price={20000} count={5000}/>
+      <Card name={"Наименование крассные"} image={Boots2} price={30000}/>
 
     </>
   )
