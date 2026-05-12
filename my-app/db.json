@@ -1,0 +1,18 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Кроссовки белые",
+            "price": 20000,
+            "count": 5000,
+            "imgUrl": "./src/assets/boots1.png"
+        },
+        {
+            "id": 2,
+            "name": "Наименование крассные",
+            "price": 30000,
+            "count": 1000,
+            "imgUrl": "./src/assets/boots2.webp"
+        }
+    ]
+}
