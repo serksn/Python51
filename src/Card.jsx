@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './CardComponent.css'
+import './css/CardComponent.css'
 import Button from './Button' 
 
 const Card = ({name, image, price, count = 0}) => {

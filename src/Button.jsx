@@ -1,5 +1,5 @@
 import React from 'react'
-import './CardComponent.css'
+import './css/CardComponent.css'
 
 
 export default ({label, onClick, disabled = false}) => {
